@@ -125,7 +125,26 @@ img {
     }
 }
 
-.logo h1 {
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: gentleRotate 3s ease-in-out infinite alternate;
+}
+
+@keyframes gentleRotate {
+    0% { transform: rotate(-2deg); }
+    100% { transform: rotate(2deg); }
+}
+
+.logo-text h1 {
     color: var(--white);
     font-size: 1.2rem;
     font-weight: 800;
@@ -133,7 +152,7 @@ img {
     margin: 0;
 }
 
-.logo h1 span {
+.logo-text h1 span {
     color: var(--primary-blue);
     display: block;
     font-size: 1.4rem;
@@ -1775,6 +1794,23 @@ img {
     /* Navigation Mobile */
     .nav-header {
         position: relative;
+    }
+    
+    .logo {
+        gap: 8px;
+    }
+    
+    .logo-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .logo-text h1 {
+        font-size: 1rem;
+    }
+    
+    .logo-text h1 span {
+        font-size: 1.1rem;
     }
     
     .nav-toggle {
