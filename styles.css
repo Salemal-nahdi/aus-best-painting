@@ -630,6 +630,173 @@ img {
 }
 
 /* ===========================
+   GARDENING HIGHLIGHT
+   =========================== */
+
+.gardening-highlight {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    position: relative;
+    overflow: hidden;
+}
+
+.gardening-highlight::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.gardening-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.gardening-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.gardening-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.gardening-icon {
+    background: rgba(255, 255, 255, 0.2);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.gardening-icon i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.gardening-text {
+    text-align: left;
+    color: white;
+}
+
+.gardening-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.gardening-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.gardening-services {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gardening-services span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.gardening-services i {
+    color: #A5D6A7;
+    font-size: 0.9rem;
+}
+
+.btn-white {
+    background: white;
+    color: #2E7D32;
+    border: 2px solid white;
+    font-weight: 700;
+    padding: 15px 30px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-white:hover {
+    background: transparent;
+    color: white;
+    border-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .gardening-highlight {
+        padding: 40px 0;
+    }
+    
+    .gardening-box {
+        padding: 30px 20px;
+    }
+    
+    .gardening-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .gardening-text {
+        text-align: center;
+    }
+    
+    .gardening-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .gardening-text p {
+        font-size: 1rem;
+    }
+    
+    .gardening-services {
+        justify-content: center;
+    }
+    
+    .gardening-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .gardening-icon i {
+        font-size: 2rem;
+    }
+}
+
+/* ===========================
    WHY CHOOSE US
    =========================== */
 
