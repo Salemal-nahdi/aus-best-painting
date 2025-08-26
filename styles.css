@@ -126,25 +126,10 @@ img {
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    display: block;
 }
 
-.logo-icon {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: gentleRotate 3s ease-in-out infinite alternate;
-}
-
-@keyframes gentleRotate {
-    0% { transform: rotate(-2deg); }
-    100% { transform: rotate(2deg); }
-}
-
-.logo-text h1 {
+.logo h1 {
     color: var(--white);
     font-size: 1.2rem;
     font-weight: 800;
@@ -152,7 +137,7 @@ img {
     margin: 0;
 }
 
-.logo-text h1 span {
+.logo h1 span {
     color: var(--primary-blue);
     display: block;
     font-size: 1.4rem;
@@ -1021,27 +1006,42 @@ img {
     }
     
     .before-after-container {
-        flex-direction: column;
+        flex-direction: row;
         gap: 15px;
+        align-items: center;
     }
     
     .before-after-divider {
-        flex-direction: row;
-        width: 100%;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex-shrink: 0;
     }
     
     .divider-line {
-        width: 60px;
-        height: 2px;
-        background: linear-gradient(90deg, transparent, #00BCD4, transparent);
-        margin-bottom: 0;
-        margin-right: 10px;
+        width: 2px;
+        height: 40px;
+        background: linear-gradient(180deg, transparent, #00BCD4, transparent);
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    
+    .divider-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+    
+    .before-image,
+    .after-image {
+        flex: 1;
+        min-width: 0;
     }
     
     .before-image img,
     .after-image img {
-        height: 180px;
+        height: 140px;
+        width: 100%;
+        object-fit: cover;
     }
     
     .before-after-item {
@@ -1400,7 +1400,7 @@ img {
 
 .service-features h4 {
     margin-bottom: 15px;
-    color: var(--primary-black);
+    color: var(--white);
 }
 
 .service-features ul {
@@ -2020,11 +2020,11 @@ img {
         height: 32px;
     }
     
-    .logo-text h1 {
+    .logo h1 {
         font-size: 1rem;
     }
     
-    .logo-text h1 span {
+    .logo h1 span {
         font-size: 1.1rem;
     }
     
@@ -2314,8 +2314,31 @@ img {
     }
     
     .testimonials-slider .testimonial-card {
-        min-width: 300px;
+        min-width: 280px;
+        max-width: 350px;
         flex-shrink: 0;
+        padding: 25px 20px;
+    }
+    
+    .testimonial-card p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    
+    .testimonial-author strong {
+        font-size: 1rem;
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .testimonial-author span {
+        font-size: 0.85rem;
+        opacity: 0.8;
     }
     
     .gallery-grid {
