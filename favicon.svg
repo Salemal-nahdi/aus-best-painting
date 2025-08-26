@@ -1,0 +1,18 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Paintbrush Handle -->
+  <rect x="10" y="18" width="3" height="12" rx="1.5" fill="#8B4513"/>
+  
+  <!-- Metal Ferrule -->
+  <rect x="9.5" y="13" width="4" height="6" rx="0.5" fill="#C0C0C0"/>
+  
+  <!-- Brush Bristles -->
+  <path d="M9 13 L9 6 Q9 4 11 4 Q13 4 13 6 L13 13 Z" fill="#00BCD4"/>
+  
+  <!-- Paint Drip -->
+  <ellipse cx="11" cy="3" rx="1.5" ry="2" fill="#00BCD4" opacity="0.8"/>
+  
+  <!-- Brush Texture Lines -->
+  <line x1="10" y1="13" x2="10" y2="8" stroke="#0097A7" stroke-width="0.3"/>
+  <line x1="11" y1="13" x2="11" y2="7" stroke="#0097A7" stroke-width="0.3"/>
+  <line x1="12" y1="13" x2="12" y2="8" stroke="#0097A7" stroke-width="0.3"/>
+</svg>
