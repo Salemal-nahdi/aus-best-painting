@@ -128,7 +128,11 @@
                         <h3>Request Your Free Quote</h3>
                         <p>Fill out the form below and we'll get back to you within 24 hours with your personalized quote.</p>
                         
-                        <form id="contactForm" class="contact-form">
+                        <form id="contactForm" class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                            <input type="hidden" name="form-name" value="contact" />
+                            <p style="display: none;">
+                                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                            </p>
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="firstName">First Name *</label>
@@ -200,20 +204,6 @@
                                 <label for="message">Project Details *</label>
                                 <textarea id="message" name="message" rows="5" required placeholder="Please describe your project, including any specific requirements or questions you may have..."></textarea>
                             </div>
-
-                            <div class="form-group">
-                                <label for="howHeard">How did you hear about us?</label>
-                                <select id="howHeard" name="howHeard">
-                                    <option value="">Please select</option>
-                                    <option value="google">Google Search</option>
-                                    <option value="facebook">Facebook</option>
-                                    <option value="instagram">Instagram</option>
-                                    <option value="referral">Friend/Family Referral</option>
-                                    <option value="signage">Vehicle/Signage</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-
 
 
                             <button type="submit" class="btn btn-primary btn-submit">

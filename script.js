@@ -119,8 +119,13 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
             
-            // Simulate form submission (replace with actual API call)
-            setTimeout(() => {
+            // Submit to Netlify
+            fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(() => {
                 // Success message
                 showMessage('Thank you for your inquiry! We will contact you within 24 hours.', 'success');
                 
@@ -133,7 +138,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Scroll to message
                 formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 2000);
+            })
+            .catch((error) => {
+                console.error('Form submission error:', error);
+                showMessage('Sorry, there was an error sending your message. Please try calling us directly.', 'error');
+                
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
         });
     }
     

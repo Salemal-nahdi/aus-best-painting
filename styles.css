@@ -558,9 +558,12 @@ img {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
     margin-bottom: 40px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .service-card {
@@ -1572,7 +1575,20 @@ img {
     .about-grid,
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
+        padding: 0 10px;
+    }
+    
+    .contact-info-column {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .contact-form-column {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
     }
     
     .service-detail-grid {
@@ -1941,6 +1957,38 @@ img {
     
     .form-row {
         grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .form-card {
+        padding: 25px 15px;
+        margin: 0 5px;
+        max-width: calc(100vw - 30px);
+        box-sizing: border-box;
+        width: 100%;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    
+    .contact-card {
+        margin: 0 5px;
+        padding: 15px;
+        max-width: calc(100vw - 30px);
+        box-sizing: border-box;
+    }
+    
+    .why-contact {
+        margin: 0 5px;
+        padding: 20px 15px;
+        max-width: calc(100vw - 30px);
+        box-sizing: border-box;
     }
     
     .faq-grid {
@@ -2073,6 +2121,199 @@ img {
     
     .stat h3 {
         font-size: 2rem;
+    }
+    
+    /* Contact page specific mobile fixes */
+    .contact-section {
+        padding: 30px 0;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0;
+    }
+    
+    .contact-info-column,
+    .contact-form-column {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    .form-card {
+        padding: 20px 15px;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+    
+    .form-card h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .form-card p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-group label {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+        padding: 12px;
+        border-radius: 5px;
+    }
+    
+    .btn-submit {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+    }
+    
+    .contact-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .contact-card {
+        padding: 15px;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .contact-icon {
+        min-width: 50px;
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+    }
+    
+    .contact-details {
+        flex: 1;
+    }
+    
+    .contact-details h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    
+    .contact-details a,
+    .contact-details p {
+        font-size: 14px;
+    }
+    
+    .why-contact {
+        padding: 20px 15px;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+    
+    .why-contact h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    .why-contact ul li {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    
+    .contact-intro {
+        margin-bottom: 25px;
+    }
+    
+    .contact-intro h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .contact-intro p {
+        font-size: 14px;
+    }
+    
+    /* FAQ Section Mobile */
+    .faq-section {
+        padding: 40px 0;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .faq-item {
+        padding: 20px 15px;
+    }
+    
+    .faq-item h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .faq-item p {
+        font-size: 14px;
+    }
+    
+    /* Map Section Mobile */
+    .map-section {
+        padding: 40px 0;
+    }
+    
+    .map-overlay {
+        padding: 30px 20px;
+    }
+    
+    .map-overlay h3 {
+        font-size: 20px;
+    }
+    
+    .map-overlay p {
+        font-size: 14px;
+    }
+    
+    /* CTA Section Mobile */
+    .cta-section {
+        padding: 40px 0;
+    }
+    
+    .cta-content h2 {
+        font-size: 24px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        text-align: center;
     }
 }
 
