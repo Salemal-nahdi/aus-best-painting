@@ -804,32 +804,139 @@ img {
     }
 }
 
-/* A&M Services Simple Styling */
-.gardening-contact {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
+/* A&M Services 3-Column Grid */
+.gardening-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.service-column {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
     padding: 20px;
-    text-align: center;
-    margin-top: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
 }
 
-.gardening-contact p {
-    margin: 8px 0;
+.service-column h4 {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+}
+
+.service-column h4 i {
+    color: #A5D6A7;
+    font-size: 0.9rem;
+}
+
+.service-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-column li {
+    color: rgba(255, 255, 255, 0.9);
+    padding: 3px 0;
+    font-size: 0.8rem;
+    line-height: 1.3;
+    position: relative;
+    padding-left: 12px;
+}
+
+.service-column li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #A5D6A7;
+    font-weight: bold;
+}
+
+.contact-details p {
+    margin: 6px 0;
     color: white;
     font-weight: 600;
+    font-size: 0.85rem;
+    text-align: left;
 }
 
-.gardening-contact p:first-child {
-    font-size: 1.2rem;
-    color: white;
-    font-weight: 700;
-}
-
-.gardening-contact p:last-child {
+.contact-details p:first-child {
     font-size: 0.95rem;
-    opacity: 0.9;
+    color: #A5D6A7;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.features {
+    display: grid;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.features span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.features i {
+    color: #A5D6A7;
+    font-size: 0.7rem;
+    width: 12px;
+}
+
+/* Mobile responsiveness for 3-column grid */
+@media (max-width: 768px) {
+    .gardening-services-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin: 20px 0;
+    }
+    
+    .service-column {
+        padding: 15px;
+    }
+    
+    .service-column h4 {
+        font-size: 0.95rem;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .service-column li {
+        font-size: 0.8rem;
+        padding: 2px 0;
+    }
+    
+    .contact-details p {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    
+    .contact-details p:first-child {
+        font-size: 0.9rem;
+    }
+    
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .features span {
+        justify-content: center;
+        font-size: 0.7rem;
+    }
 }
 
 /* ===========================
