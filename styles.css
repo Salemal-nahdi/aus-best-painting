@@ -874,6 +874,7 @@ img {
 .features span {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
     font-size: 0.75rem;
     color: rgba(255, 255, 255, 0.9);
