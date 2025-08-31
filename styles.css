@@ -865,6 +865,11 @@ img {
     margin-bottom: 10px;
 }
 
+.contact-details p:nth-child(2),
+.contact-details p:nth-child(3) {
+    color: white;
+}
+
 .features {
     display: grid;
     gap: 6px;
